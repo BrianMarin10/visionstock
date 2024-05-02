@@ -21,6 +21,11 @@ Route::middleware('auth')->group(function () {
 Route::get('/terminos-y-condiciones', function () {
     return view('terminosycondiciones.index');
 });
+//ruta de política de datos,la ruta para acceder a la vista es http://localhost:8000/politicadatos
+
+Route::get('/politicadatos', function () {
+    return view('politicadatos.index');
+}); 
 
 
 require __DIR__.'/auth.php';
