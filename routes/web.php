@@ -17,4 +17,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//ruta de términos y condiciones, la ruta para acceder a la vista es http://localhost:8000/terminos-y-condiciones
+Route::get('/terminos-y-condiciones', function () {
+    return view('terminosycondiciones.index');
+});
+
+
 require __DIR__.'/auth.php';
