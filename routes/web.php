@@ -27,5 +27,9 @@ Route::get('/politicadatos', function () {
     return view('politicadatos.index');
 }); 
 
+Route::get('/admin', function () {
+    return view('admin.index');
+}); 
+
 
 require __DIR__.'/auth.php';
