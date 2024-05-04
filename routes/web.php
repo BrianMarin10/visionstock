@@ -47,6 +47,12 @@ Route::get('/producto-gota-lubricante', function () {
     return view('producto-gota-lubricante.index');
 }); 
 
+Route::get('/ventas', function () {
+    return view('ventas.index');
+}); 
 
+Route::get('/ajustes', function () {
+    return view('ajustes.index');
+}); 
 
 require __DIR__.'/auth.php';
