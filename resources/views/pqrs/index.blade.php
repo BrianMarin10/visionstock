@@ -37,50 +37,6 @@
 <div class="container">
     <h2>Modificar y consultar PQRS</h2>
 
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Cliente</th>
-            <th>Estado</th>
-            <th>Fecha creación</th>
-            <th>Observación</th>
-        </tr>
-        <tr>
-            <td>50001</td>
-            <td>COO123</td>
-            <td>PENDI..</td>
-            <td>24/02/24</td>
-            <td>NO ME GUSTA..</td>
-        </tr>
-        <tr>
-            <td>P0001</td>
-            <td>C05603</td>
-            <td>ATEND..</td>
-            <td>20/01/24</td>
-            <td>FALTA LA INTE..</td>
-        </tr>
-        <tr>
-            <td>R0001</td>
-            <td>Q0001</td>
-            <td>CO1235</td>
-            <td>C00013</td>
-            <td>PENDI..</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>13/02/24</td>
-            <td>ME ATENDIER..</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>30/01/24</td>
-            <td>ME ROBARON ..</td>
-        </tr>
-    </table>
 </div>
 
 </body>

@@ -78,5 +78,8 @@ Route::get('/ventas', function () {
 Route::get('/ajustes', function () {
     return view('ajustes.index');
 }); 
+Route::get('/usuarios', function () {
+    return view('usuarios.index');
+}); 
 
 require __DIR__.'/auth.php';
