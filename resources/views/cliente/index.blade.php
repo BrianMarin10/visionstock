@@ -11,8 +11,6 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>CLIENTES</title>
-</head>
-
 <body>
     <x-app-layout>
         <x-slot name="header">
@@ -20,8 +18,8 @@
                 {{ __('Clientes') }}
             </h2>
         </x-slot>
-        <div class="container">
-            <h1>Listado de Clientes</h1>
+        <div class="container">            
+             
             <div class="py-12">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -32,6 +30,7 @@
                             @if ($error ?? '')
                                 <div class="alert alert-danger">{{ $error }}</div>
                             @endif
+                            
                             <table class="table">
                                 <thead>
                                     <tr>

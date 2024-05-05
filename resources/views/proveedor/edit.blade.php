@@ -10,46 +10,55 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Producto</title>
+    <title>Proveedor</title>
 </head>
 
 <body>
     <x-app-layout>
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Productos') }}
+                {{ __('Proveedores') }}
             </h2>
         </x-slot>
         <div class="container">
-            <form method="POST" action="{{ route('productos.update', ['producto' => $producto->id]) }}">
+            <form method="POST" action="{{ route('proveedores.update', ['proveedor' => $proveedor->id]) }}">
                 @method('put')
                 @csrf
                 <div class="mb-3">
                     <label for="codigo" class="form-label">Id</label>
                     <input type="hidden" class="form-control" id="id" aria-describedby="codigoHelp"
-                        name="id" disabled="disabled" value="{{ $producto->id }}">
-                    <div id="codigoHelp" class="form-text">Producto Id</div>
+                        name="id" disabled="disabled" value="{{ $proveedor->id }}">
+                    <div id="codigoHelp" class="form-text">Proveedor Id</div>
                 </div>
                 <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre Producto</label>
+                    <label for="nit" class="form-label">Nit</label>
+                    <input type="number" required class="form-control" id="nit" name="nit"
+                        value="{{ $proveedor->nit }}">
+                </div>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre Empresa</label>
                     <input type="text" required class="form-control" id="nombre" name="nombre"
-                    value="{{ $producto->nombre_producto }}">
+                        value="{{ $proveedor->nombre_empresa }}">
                 </div>
                 <div class="mb-3">
-                    <label for="tipo" class="form-label">Tipo Producto</label>
-                    <input type="text" required class="form-control" id="tipo" name="tipo"
-                    value="{{ $producto->tipo_producto }}">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input type="text" required class="form-control" id="direccion" name="direccion"
+                        value="{{ $proveedor->direccion }}">
                 </div>
                 <div class="mb-3">
-                    <label for="descripcion" class="form-label">Descripción</label>
-                    <input type="text" required class="form-control" id="descripcion" name="descripcion"
-                    value="{{ $producto->descripcion }}">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" required class="form-control" id="telefono" name="telefono"
+                        min="1" max="9947483647" value="{{ $proveedor->telefono }}">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" required class="form-control" id="email" name="email"
+                        value="{{ $proveedor->email }}">
                 </div>
                 
-
                 <div class="mt-3">
                     <button type="submit" class="btn btn-primary">Actualizar</button>
-                    <a href="{{ route('productos.index') }}" class="btn btn-warning">Cancelar</a>
+                    <a href="{{ route('proveedores.index') }}" class="btn btn-warning">Cancelar</a>
                 </div>
             </form>
         </div>

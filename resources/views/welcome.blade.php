@@ -6,7 +6,7 @@
 
         <title>Vision Stock</title>
 
-        
+    
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -28,16 +28,16 @@
                         <nav class="-mx-3 flex flex-1 justify-end">
                             @auth
                                 <a href="{{ url('/dashboard') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                    Dashboard
+                                    Inicio
                                 </a>
                             @else
                                 <a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                    Log in
+                                    Inicio sesión
                                 </a>
 
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                        Register
+                                        Registro
                                     </a>
                                 @endif
                             @endauth
@@ -50,8 +50,7 @@
         <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
 </div>
         <footer class="py-16 text-center text-sm text-black dark:text-white/70 fixed bottom-0 w-full">
-        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-        Desarrollado por Brian Marin y Zemog Gómez
+        Desarrollado por VISION STOCK 2024 / Brian Marin - Zemog Gómez - Camila y Juan José
     </footer>
 
 </body>

@@ -8,42 +8,53 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Agregar nuevo producto</title>
+    <title>Agregar nuevo proveedor</title>
   </head>
   <body>
   <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Productos') }}
+            {{ __('Proveedores') }}
         </h2>
     </x-slot>
     <div class="container">
-    <form method="POST" action="{{ route('productos.store') }}">
+    <form method="POST" action="{{ route('proveedores.store') }}">
         @csrf
         <div class="mb-3">
         <label for="id" class="form-label">Codigo</label>
         <input type="hidden" class="form-control" id="id" aria-describedby="idHelp" name="id"
         disabled="disabled">
-        <div id="idHelp" class="form-text">Código Producto</div>
+        <div id="idHelp" class="form-text">Código Proveedor</div>
         </div>
         <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre Producto</label>
+        <label for="nit" class="form-label">Nit</label>
+        <input type="number" required class="form-control" id="nit" aria-describedby="nameHelp" name="nit"
+        placeholder="Apellido proveedor">
+        </div>
+        <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre Empresa</label>
         <input type="text" required class="form-control" id="nombre" aria-describedby="nameHelp" name="nombre"
-        placeholder="Nombre producto">
+        placeholder="Nombre proveedor">
         </div>
         <div class="mb-3">
-        <label for="tipo" class="form-label">Tipo Producto</label>
-        <input type="text" required class="form-control" id="tipo" aria-describedby="nameHelp" name="tipo"
-        placeholder="Tipo producto">
+        <label for="direccion" class="form-label">Dirección</label>
+        <input type="text" required class="form-control" id="direccion" aria-describedby="nameHelp" name="direccion"
+        placeholder="Direccion proveedor">
         </div>
         <div class="mb-3">
-        <label for="descripcion" class="form-label">Descripción</label>
-        <input type="text" required class="form-control" id="descripcion" aria-describedby="nameHelp" name="descripcion"
-        placeholder="descripcion producto">
+        <label for="telefono" class="form-label">Telefono</label>
+        <input type="number" required class="form-control" id="telefono" aria-describedby="nameHelp" name="telefono"
+        placeholder="Telefono proveedor" min="1" max="9947483647" >
         </div>
+        <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" required class="form-control" id="email" aria-describedby="nameHelp" name="email"
+        placeholder="Email proveedor">
+        </div>
+        
         <div class="mt-3">
         <button type="submit" class="btn btn-primary">Guardar</button>
-        <a href="{{ route('productos.index') }}" class="btn btn-warning">Cancelar</a>
+        <a href="{{ route('proveedores.index') }}" class="btn btn-warning">Cancelar</a>
         </div>
 </form>
     </div>

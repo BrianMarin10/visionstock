@@ -21,13 +21,12 @@
             </h2>
         </x-slot>
         <div class="container">
-            <h1>Editar Cliente</h1>
             <form method="POST" action="{{ route('clientes.update', ['cliente' => $cliente->id]) }}">
                 @method('put')
                 @csrf
                 <div class="mb-3">
                     <label for="codigo" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="id" aria-describedby="codigoHelp"
+                    <input type="hidden" class="form-control" id="id" aria-describedby="codigoHelp"
                         name="id" disabled="disabled" value="{{ $cliente->id }}">
                     <div id="codigoHelp" class="form-text">Cliente Id</div>
                 </div>

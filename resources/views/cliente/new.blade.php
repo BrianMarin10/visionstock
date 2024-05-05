@@ -18,12 +18,11 @@
         </h2>
     </x-slot>
     <div class="container">
-    <h1>Agregar Cliente</h1>
     <form method="POST" action="{{ route('clientes.store') }}">
         @csrf
         <div class="mb-3">
         <label for="id" class="form-label">Codigo</label>
-        <input type="text" class="form-control" id="id" aria-describedby="idHelp" name="id"
+        <input type="hidden" class="form-control" id="id" aria-describedby="idHelp" name="id"
         disabled="disabled">
         <div id="idHelp" class="form-text">Código Cliente</div>
         </div>
