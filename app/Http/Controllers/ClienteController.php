@@ -103,7 +103,7 @@ class ClienteController extends Controller
                 $clientes = DB::table('clientes')
                     ->select('clientes.*')
                     ->get();
-                return view('cliente.index', ['clientes' => $clientes, 'error' => 'No se puede eliminar el cliente debido a que existen reservas asociadas.']);
+                return view('cliente.index', ['clientes' => $clientes, 'error' => 'No se puede eliminar el cliente ya que se está usando en otra tabla.']);
             } else {
                 // Otros errores de la base de datos
                 $clientes = DB::table('clientes')
