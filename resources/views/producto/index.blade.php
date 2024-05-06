@@ -11,6 +11,48 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>PRODUCTOS</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .table {
+            background-color: #fff;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,59 +62,54 @@
                 {{ __('Productos') }}
             </h2>
         </x-slot>
-        <div class="container">
-            <div class="py-12">
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div class="p-6 text-gray-900">
-                            <a href="{{ route('productos.create') }}"
-                                class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded ml-2">Agregar
-                                producto</a>
-                            @if ($error ?? '')
-                                <div class="alert alert-danger">{{ $error }}</div>
-                            @endif
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Código</th>
-                                        <th scope="col">Nombre Producto</th>
-                                        <th scope="col">Tipo Producto</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($productos as $producto)
-                                        <tr>
-                                            <th scope="row">{{ $producto->id }}</th>
-                                            <td>{{ $producto->nombre_producto }}</td>
-                                            <td>{{ $producto->tipo_producto }}</td>
-                                            <td>{{ $producto->descripcion }}</td>
-                                            <td>
-                                                <div class="btn-group" role="group">
-                                                    <a href="{{ route('productos.edit', ['producto' => $producto->id]) }}"
-                                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                                        Editar</a></li>
+        <div class="container my-5">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="font-semibold text-xl text-white leading-tight">Productos</h2>
+                </div>
+                <div class="card-body">
+                    <a href="{{ route('productos.create') }}" class="btn btn-primary mb-3">Agregar producto</a>
+                    @if ($error ?? '')
+                    <div class="alert alert-danger">{{ $error }}</div>
+                    @endif
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Código</th>
+                                <th scope="col">Nombre Producto</th>
+                                <th scope="col">Tipo Producto</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($productos as $producto)
+                            <tr>
+                                <th scope="row">{{ $producto->id }}</th>
+                                <td>{{ $producto->nombre_producto }}</td>
+                                <td>{{ $producto->tipo_producto }}</td>
+                                <td>{{ $producto->descripcion }}</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="{{ route('productos.edit', ['producto' => $producto->id]) }}"
+                                            class="btn btn-primary">Editar</a>
 
-
-                                                    <form
-                                                        action="{{ route('productos.destroy', ['producto' => $producto->id]) }}"
-                                                        method='POST' style="display: inline-block">
-                                                        @method('delete')
-                                                        @csrf
-                                                        <input
-                                                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2"
-                                                            type="submit" value="Eliminar">
-                                                    </form>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                                        <form action="{{ route('productos.destroy', ['producto' => $producto->id]) }}"
+                                            method='POST' style="display: inline-block">
+                                            @method('delete')
+                                            @csrf
+                                            <input class="btn btn-danger ml-2" type="submit" value="Eliminar">
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
     </x-app-layout>
 </body>
+
+</html>
