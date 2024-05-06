@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\PqrsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -39,6 +40,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/proveedores/{proveedor}', [ProveedorController::class, 'destroy'])->name('proveedores.destroy');
     Route::put('/proveedores/{proveedor}', [ProveedorController::class, 'update'])->name('proveedores.update');
     Route::get('/proveedores/{proveedor}/edit', [ProveedorController::class, 'edit'])->name('proveedores.edit');
+    // Rutas de pqrss
+    Route::get('/pqrss', [PqrsController::class, 'index'])->name('pqrss.index');
+    Route::post('/pqrss', [PqrsController::class, 'store'])->name('pqrss.store');
+    Route::get('/pqrss/create', [PqrsController::class, 'create'])->name('pqrss.create');
+    Route::delete('/pqrss/{pqrs}', [PqrsController::class, 'destroy'])->name('pqrss.destroy');
+    Route::put('/pqrss/{pqrs}', [PqrsController::class, 'update'])->name('pqrss.update');
+    Route::get('/pqrss/{pqrs}/edit', [PqrsController::class, 'edit'])->name('pqrss.edit');
 });
 
 //ruta de términos y condiciones, la ruta para acceder a la vista es http://localhost:8000/terminos-y-condiciones
@@ -53,10 +61,6 @@ Route::get('/politicadatos', function () {
 
 Route::get('/admin', function () {
     return view('admin.index');
-}); 
-
-Route::get('/pqrs', function () {
-    return view('pqrs.index');
 }); 
 
 Route::get('/inventario', function () {

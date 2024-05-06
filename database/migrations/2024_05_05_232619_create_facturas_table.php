@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pqrs', function (Blueprint $table) {
+        Schema::create('facturas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_cliente');
-            $table->foreign('id_cliente')->references('id')->on('clientes');
-            $table->string('estado');
+            $table->unsignedBigInteger('id_proveedor');
+            $table->foreign('id_proveedor')->references('id')->on('proveedores');
+            $table->unsignedBigInteger('id_producto');
+            $table->foreign('id_producto')->references('id')->on('productos');
+            $table->integer('valor');
             $table->date('fecha');
-            $table->text('observacion');
-            $table->text('solucion')->nullable();
+            $table->text('descripcion');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pqrs');
+        Schema::dropIfExists('facturas');
     }
 };
