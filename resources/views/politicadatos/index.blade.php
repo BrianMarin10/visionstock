@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de tratamiento de datos</title>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,9 +17,10 @@
 
         .header {
             background-image: url('{{ asset('images/tratamientodatos.png') }}');
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
-            height: 300px; /* Alt */
+            height: 185px; /* Alt */
             text-align: center;
             color: white;
             padding-top: 50px; /* espacio en text */
@@ -28,7 +30,7 @@
             padding: 20px;
         }
     </style>
-</head>
+    </head>
 <body>
 
 <div class="header">

@@ -16,9 +16,10 @@
 
         .header {
             background-image: url('{{ asset('images/terminosycondiciones.png') }}');
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
-            height: 300px; /* Alt */
+            height: 192px; /* Alt */
             text-align: center;
             color: white;
             padding-top: 50px; /* espacio en text */
