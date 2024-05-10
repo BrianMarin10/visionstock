@@ -52,12 +52,13 @@ Route::middleware('auth')->group(function () {
 //ruta de términos y condiciones, la ruta para acceder a la vista es http://localhost:8000/terminos-y-condiciones
 Route::get('/terminos-y-condiciones', function () {
     return view('terminosycondiciones.index');
-});
+})->name('terminosycondiciones');
 //ruta de política de datos,la ruta para acceder a la vista es http://localhost:8000/politicadatos
 
 Route::get('/politicadatos', function () {
     return view('politicadatos.index');
-}); 
+})->name('politicadedatos');
+ 
 
 Route::get('/admin', function () {
     return view('admin.index');
