@@ -37,10 +37,14 @@
         </select>
 
         <div class="mb-3">
-        <label for="estado" class="form-label">Estado</label>
-        <input type="text" required class="form-control" id="estado" aria-describedby="nameHelp" name="estado"
-        value="Pendiente">
-        </div>
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" name="estado">
+                        <option selected>Seleccione el estado del pqrs</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="En Espera">En Espera</option>
+                        <option value="Atendido">Atendido</option>
+                    </select>
+                </div>
         <div class="mb-3">
         <label for="fecha" class="form-label">Fecha pqrs</label>
         <input type="date" required class="form-control" id="fecha" aria-describedby="nameHelp" name="fecha"

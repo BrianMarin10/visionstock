@@ -39,11 +39,17 @@
                 @endif
             @endforeach
         </select>
+
         <div class="mb-3">
-        <label for="estado" class="form-label">Estado</label>
-        <input type="text" required class="form-control" id="estado"  name="estado"
-        value="Atendido" >
-        </div>
+                    <label for="estado" class="form-label">Rol</label>
+                    <select class="form-select" name="estado">
+                        <option selected>{{ $pqrs->estado }}</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="En Espera">En Espera</option>
+                        <option value="Atendido">Atendido</option>
+                    </select>
+                </div>
+
         <div class="mb-3">
         <label for="fecha" class="form-label">Fecha pqrs</label>
         <input type="date" required class="form-control" id="fecha"  name="fecha"

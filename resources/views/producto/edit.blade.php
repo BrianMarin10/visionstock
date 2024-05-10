@@ -102,9 +102,15 @@
                                         value="{{ $producto->nombre_producto }}">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="tipo" class="form-label">Tipo Producto</label>
-                                    <input type="text" required class="form-control" id="tipo" name="tipo"
-                                        value="{{ $producto->tipo_producto }}">
+                                <label for="tipo" class="form-label">Tipo de producto</label>
+                                <select class="form-select" name="tipo">
+                                <option selected>{{ $producto->tipo }}</option>
+                                <option value="Medicamentos">Medicamentos</option>
+                                <option value="Equipos de atención al público">Equipos de atención al público</option>
+                                <option value="Herramientas de atención">Herramientas de atención</option>
+                                <option value="Herramientas clínicas">Herramientas clínicas</option>
+                                <option value="Inventario">Inventario</option>
+                                </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="descripcion" class="form-label">Descripción</label>

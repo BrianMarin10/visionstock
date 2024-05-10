@@ -101,11 +101,19 @@
                                     <input type="text" required class="form-control" id="nombre"
                                         aria-describedby="nameHelp" name="nombre" placeholder="Nombre producto">
                                 </div>
+
                                 <div class="mb-3">
-                                    <label for="tipo" class="form-label">Tipo Producto</label>
-                                    <input type="text" required class="form-control" id="tipo"
-                                        aria-describedby="nameHelp" name="tipo" placeholder="Tipo producto">
+                                <label for="tipo" class="form-label">Tipo de producto</label>
+                                <select class="form-select" name="tipo">
+                                <option selected>Seleccione el tipo de producto</option>
+                                <option value="Medicamentos">Medicamentos</option>
+                                <option value="Equipos de atención al público">Equipos de atención al público</option>
+                                <option value="Herramientas de atención">Herramientas de atención</option>
+                                <option value="Herramientas clínicas">Herramientas clínicas</option>
+                                <option value="Inventario">Inventario</option>
+                                </select>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="descripcion" class="form-label">Descripción</label>
                                     <input type="text" required class="form-control" id="descripcion"
