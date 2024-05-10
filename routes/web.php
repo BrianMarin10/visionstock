@@ -5,6 +5,10 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PqrsController;
+use App\Http\Controllers\AjustesController;
+use App\Http\Controllers\ReporteVentaController;
+
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -80,9 +84,24 @@ Route::get('/ventas', function () {
     return view('ventas.index');
 }); 
 
-Route::get('/ajustes', function () {
-    return view('ajustes.index');
-}); 
+//ruta de ajustes
+Route::get('/ajustes', [AjustesController::class, 'index'])->name('ajustes.index');
+
+// Ruta para la vista de reportes
+Route::get('/reportes', function () {
+    return view('ajustes.reportes');
+})->name('reportes');
+
+// Ruta para la configuración del sistema
+Route::get('/configuracion', function () {
+    return view('ajustes.configuracion');
+})->name('configuracion');
+
+
+Route::get('/reporte-de-venta', [ReporteVentaController::class, 'index'])->name('reporte-de-venta');
+Route::get('/reportedeventa', [ReporteVentaController::class, 'download'])->name('reportedeventa');
+
+
 Route::get('/usuarios', function () {
     return view('usuarios.index');
 }); 

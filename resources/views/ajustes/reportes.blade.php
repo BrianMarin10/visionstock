@@ -6,7 +6,7 @@
   <title>Ajustes</title>
   <style>
     .warehouse-background {
-      background-image: url('{{ asset('images/ajustes.png') }}');
+      background-image: url('{{ asset('images/Modulos-auditoria.png') }}');
       background-size: cover;
       height: 100vh;
       display: flex;
@@ -18,6 +18,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column; /* Colocar los botones uno debajo del otro */
     }
 
     .button {
@@ -28,7 +29,7 @@
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
-      margin: 0 5px; /* Espacio entre los botones */
+      margin: 5px 0; /* Espacio entre los botones */
       transition: background-color 0.3s, color 0.3s; /* Transición breve de mouse*/
       text-decoration: none; /* Eliminar el subrayado de los enlaces */
     }
@@ -38,12 +39,14 @@
     }
   </style>
 </head>
-<h2>Modulos de auditoria</h2>
+<h2>Tipos de reporte</h2>
 <body>
   <div class="warehouse-background">
      <div class="button-container">
-      <a href="{{ route('reportes') }}" class="button">Reportes</a>
-      <a href="{{ route('configuracion') }}" class="button">Configuración del sistema</a>
+      <a href="{{ route('reporte-de-venta') }}" class="button">De venta</a>
+   
+      <button class="button">Inventario</button>
+      <button class="button">Costos</button>
     </div>
   </div>
 </body>

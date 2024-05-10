@@ -44,6 +44,12 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+    <x-nav-link :href="route('ajustes.index')" :active="request()->routeIs('ajustes.index')">
+        {{ __('Ajustes') }}
+    </x-nav-link>
+</div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                <x-nav-link :href="route('politicadedatos')" :active="request()->routeIs('politicadedatos')">
                 {{ __('Política de Datos') }}
             </x-nav-link>
