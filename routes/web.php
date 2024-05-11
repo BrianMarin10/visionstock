@@ -5,6 +5,8 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PqrsController;
+use App\Http\Controllers\FacturaController;
+use App\Http\Controllers\InventarioController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -47,6 +49,20 @@ Route::middleware('auth')->group(function () {
     Route::delete('/pqrss/{pqrs}', [PqrsController::class, 'destroy'])->name('pqrss.destroy');
     Route::put('/pqrss/{pqrs}', [PqrsController::class, 'update'])->name('pqrss.update');
     Route::get('/pqrss/{pqrs}/edit', [PqrsController::class, 'edit'])->name('pqrss.edit');
+    // Rutas de facturas
+    Route::get('/facturas', [FacturaController::class, 'index'])->name('facturas.index');
+    Route::post('/facturas', [FacturaController::class, 'store'])->name('facturas.store');
+    Route::get('/facturas/create', [FacturaController::class, 'create'])->name('facturas.create');
+    Route::delete('/facturas/{factura}', [FacturaController::class, 'destroy'])->name('facturas.destroy');
+    Route::put('/facturas/{factura}', [FacturaController::class, 'update'])->name('facturas.update');
+    Route::get('/facturas/{factura}/edit', [FacturaController::class, 'edit'])->name('facturas.edit');
+    // Rutas de inventarios
+    Route::get('/inventarios', [InventarioController::class, 'index'])->name('inventarios.index');
+    Route::post('/inventarios', [InventarioController::class, 'store'])->name('inventarios.store');
+    Route::get('/inventarios/create', [InventarioController::class, 'create'])->name('inventarios.create');
+    Route::delete('/inventarios/{inventario}', [InventarioController::class, 'destroy'])->name('inventarios.destroy');
+    Route::put('/inventarios/{inventario}', [InventarioController::class, 'update'])->name('inventarios.update');
+    Route::get('/inventarios/{inventario}/edit', [InventarioController::class, 'edit'])->name('inventarios.edit');
 });
 
 //ruta de términos y condiciones, la ruta para acceder a la vista es http://localhost:8000/terminos-y-condiciones
