@@ -42,7 +42,6 @@
                         {{ __('PQRS') }}
                     </x-nav-link>
                 </div>
-<<<<<<< HEAD
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('facturas.index')" :active="request()->routeIs('facturas.index')">
                         {{ __('Facturas') }}
@@ -53,7 +52,6 @@
                         {{ __('Inventarios') }}
                     </x-nav-link>
                 </div>
-=======
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
     <x-nav-link :href="route('ajustes.index')" :active="request()->routeIs('ajustes.index')">
@@ -71,7 +69,6 @@
                 {{ __('Términos y condiciones') }}
             </x-nav-link>
             </div>
->>>>>>> 06a87fcb11982e6d0064f184b3864d3d65e22ffc
             </div>
 
             <!-- Settings Dropdown -->
