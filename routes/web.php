@@ -5,15 +5,12 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PqrsController;
-<<<<<<< HEAD
 use App\Http\Controllers\FacturaController;
 use App\Http\Controllers\InventarioController;
-=======
 use App\Http\Controllers\AjustesController;
 use App\Http\Controllers\ReporteVentaController;
 
 
->>>>>>> 06a87fcb11982e6d0064f184b3864d3d65e22ffc
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
