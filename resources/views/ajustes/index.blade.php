@@ -40,11 +40,25 @@
 </head>
 <h2>Modulos de auditoria</h2>
 <body>
+<x-app-layout>
+        <x-slot name="header">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Ajustes') }}
+            </h2>
+        </x-slot>
+        <div class="container my-5">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="font-semibold text-xl text-white leading-tight">Ajustes</h2>
+                </div>
+
   <div class="warehouse-background">
      <div class="button-container">
       <a href="{{ route('reportes') }}" class="button">Reportes</a>
       <a href="{{ route('configuracion') }}" class="button">Configuración del sistema</a>
     </div>
   </div>
+  </x-app-layout>
+
 </body>
 </html>

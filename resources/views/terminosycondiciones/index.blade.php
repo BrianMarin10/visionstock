@@ -31,6 +31,17 @@
     </style>
 </head>
 <body>
+<x-app-layout>
+        <x-slot name="header">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Términos y condiciones') }}
+            </h2>
+        </x-slot>
+        <div class="container my-5">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="font-semibold text-xl text-white leading-tight">Términos y condiciones</h2>
+                </div>
 
 <div class="header">
     <!-- Contenido no utilizado en el momento parte superior usar h1 -->
@@ -74,6 +85,7 @@ Si tiene alguna pregunta o inquietud sobre estos términos y condiciones, no dud
 </p>
 
 </div>
+</x-app-layout>
 
 </body>
 </html>
