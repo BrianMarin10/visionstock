@@ -7,6 +7,7 @@
     
     <style>
         body {
+
             font-family: Arial, sans-serif;
             font-size: 22px;
             color: black;
@@ -32,6 +33,18 @@
     </style>
     </head>
 <body>
+
+    <x-app-layout>
+        <x-slot name="header">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Política de datos') }}
+            </h2>
+        </x-slot>
+        <div class="container my-5">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="font-semibold text-xl text-white leading-tight">Política de datos</h2>
+                </div>
 
 <div class="header">
     <!-- Contenido no utilizado en el momento parte superior usar h1 -->
@@ -90,6 +103,7 @@ Esta política de tratamiento de datos tiene como objetivo garantizar la transpa
 </p>
 
 </div>
+</x-app-layout>
 
 </body>
 </html>
