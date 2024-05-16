@@ -84,18 +84,6 @@ Route::get('/admin', function () {
     return view('admin.index');
 }); 
 
-Route::get('/inventario', function () {
-    return view('inventario.index');
-}); 
-
-Route::get('/inventario-opciones', function () {
-    return view('inventario-opciones.index');
-}); 
-
-Route::get('/producto-gota-lubricante', function () {
-    return view('producto-gota-lubricante.index');
-}); 
-
 Route::get('/ventas', function () {
     return view('ventas.index');
 }); 
@@ -117,9 +105,24 @@ Route::get('/configuracion', function () {
 Route::get('/reporte-de-venta', [ReporteVentaController::class, 'index'])->name('reporte-de-venta');
 Route::get('/reportedeventa', [ReporteVentaController::class, 'download'])->name('reportedeventa');
 
+//PARTE Y RUTAS DE USUARIO
 
 Route::get('/usuarios', function () {
-    return view('usuarios.index');
-}); 
+    return view('usuario.index');
+})->name('usuarios');
+
+Route::get('/usuario_producto/1', function () {
+    return view('usuario_producto.producto1');
+})->name('usuario_producto1');
+
+Route::get('/usuario_producto/2', function () {
+    return view('usuario_producto.producto2');
+})->name('usuario_producto2');
+
+Route::get('/usuario_producto/3', function () {
+    return view('usuario_producto.producto3');
+})->name('usuario_producto3');
+
+
 
 require __DIR__.'/auth.php';
