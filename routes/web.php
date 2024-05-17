@@ -123,6 +123,22 @@ Route::get('/usuario_producto/3', function () {
     return view('usuario_producto.producto3');
 })->name('usuario_producto3');
 
+Route::get('/pagos', function () {
+    return view('pagos.index');
+})->name('pagos.index');
+
+Route::get('/homeu', function () {
+    return view('homeu.index');
+})->name('homeu.index');
+
+Route::get('/usuarioini', function () {
+    return view('usuarioini.index');
+})->name('usuarioini.index');
+
+Route::get('/perfiuser', function () {
+    return view('perfiuser.index');
+})->name('perfiuser.index');
+
 
 
 require __DIR__.'/auth.php';
