@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'VisionStock') }}</title>
+        <title>{{ config('app.name', 'TotalHealth') }}</title>
 
        <!-- Logo en la pestaña del navegador -->
        <link rel="icon" type="image/png" href="{{ asset('images/logonofondo.png') }}">
